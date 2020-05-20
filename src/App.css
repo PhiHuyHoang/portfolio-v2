@@ -139,9 +139,8 @@ body a:hover {
     width: 100%;
   }
 }
-
 .navigation {
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   background: #282828;
   color: #aaaaaa;
   overflow-y: scroll;
@@ -199,6 +198,15 @@ body a:hover {
   }
   .navigation__list__item:hover {
     border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    display: none;
+  }
+  .overview__related {
+    display: none;
   }
 }
 .playlist {
@@ -664,6 +672,34 @@ body a:hover {
   justify-content: space-between;
 }
 
+.artist__content .overview__artist .artist__cal {
+  width: calc(100%);
+  padding: 10px 15px;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.artist__content .overview__artist .artist__cal input {
+  color: #000000;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  outline: none;
+  text-align: center;
+}
+
+.artist__content .overview__artist .artist__cal label {
+  text-align: center;
+}
+
+.artist__content .overview__artist .artist__cal .show-more {
+  margin: 15px;
+}
+
+
 
 .artist__content .overview__artist .artist__about .highlight-text {
   color: #87ceeb;
@@ -891,14 +927,15 @@ body a:hover {
     margin: 5px;
     width: 20%;
     background: none;
+    display: none;
   }
   .related-artists .related-artist:hover {
     background: none;
     opacity: .6;
   }
-  .related-artists .related-artist__name {
+   .related-artists .related-artist__name {
     display: none;
-  }
+  } 
 }
 .overview__albums {
   width: 100%;
